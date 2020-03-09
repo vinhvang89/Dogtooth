@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<Script>
+    let a = parseInt(prompt("Vui lòng nhập cân nặng của bạn (kg) :"));
+    let b = parseInt(prompt("Vui lòng nhập chiều cao của bạn (m) :"));
+    let c = a/(b*b);
+    if ( c < 18 ){ alert("Underweight");}
+    else if ( c < 25) { alert("Normal");}
+    else if ( c < 30) { alert("Overweight");}
+    else {alert("Obese");}
+</Script>
+</body>
+</html>
