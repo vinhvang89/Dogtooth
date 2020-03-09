@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày trong tháng</title>
+</head>
+<body>
+<h3>Nhập số tháng cần tính</h3><br>
+<input type="text" id="thang"><br>
+<button type="button" onclick="x()">Tính số ngày</button><br>
+<strong id="Result">Tháng </strong>
+<script>
+   function x() {
+    let a = parseInt(document.getElementById("thang").value);
+    let b = " có 28 hoặc 29 ngày";
+    let c = " có 30 ngày ";
+    let d = " có 31 ngày ";
+    switch (a) {
+        case 2 :
+            document.getElementById("Result").innerHTML += +a+b;
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            document.getElementById("Result").innerHTML += +a+d;
+            break;
+        default:
+            document.getElementById("Result").innerHTML += +a+c;
+            break;
+
+    }
+   }
+
+</script>
+</body>
+</html>
