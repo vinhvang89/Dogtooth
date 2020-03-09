@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc Switch</title>
+</head>
+<body>
+<Script>
+    let browser = prompt(" What is your Browse :")
+    switch (browser) {
+        case "Edge":
+            alert("You've got the Edge !");
+            break;
+        case "Firefox":
+        case "Chrome":
+        case "Opera":
+        case "Safari":
+            alert("We support these browsers too");
+            break;
+            default:
+                alert("We hope that this page look ok");
+
+    }
+    let a = prompt("a?");
+    switch (a) {
+        case 0 :
+            alert("0");
+            break;
+        case 1 :
+            alert("01");
+            break;
+        case 2 :
+        case 3 :
+            alert("2,3");
+            break;
+
+    }
+    let b = parseInt(prompt("nhập số b :"));
+    if (b > 0) { alert("1");}
+    else { alert("0");}
+</Script>
+</body>
+</html>
