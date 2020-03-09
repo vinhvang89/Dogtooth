@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành if in if </title>
+</head>
+<body>
+<form action="#">
+    <Table>
+        <tr>
+            <td> Username</td>
+            <td><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="x()">Log in</button></td>
+        </tr>
+    </Table>
+</form>
+<script>
+    function x() {
+        let a = document.getElementById("username").value;
+        let b = document.getElementById("password").value;
+        if ( a === null){ alert("Cancelled your request");}
+        else { alert("I dont know you !");}
+        if ( a === "Admin"){
+            if (b === "TheMaster"){ alert("Welcome my master ");}
+            else if ( b === null ) { alert("Cancelled your request");}
+                else { alert("Wrong password ");}
+        }
+
+    }
+</script>
+</body>
+</html>
