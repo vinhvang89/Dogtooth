@@ -3,39 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <style>
+        .*{
+            width: 50px;height: 50px;
+        }
+        .button{
+            width: 50px;height: 50px; font-size: 25px ;
+        }
+    </style>
 </head>
 <body>
-<form action="#">
-<table>
+<h1>Calculator</h1>
+<table class="*">
+    <form action="#">
     <tr>
-        <td colspan="4"><input type="text" id="display" ></td>
+        <td colspan="4"><input type="text" id="show" style="width: 200px;height:20px;padding: 20px;font-size: 24px" ></td>
     </tr>
     <tr>
-        <td><button onclick="display(1)">1</button></td>
-        <td><button onclick="display(2)">2</button></td>
-        <td><button onclick="display(3)">3</button></td>
-        <td><button onclick="plus()">+</button></td>
+        <td><button class="button" value="1" onclick="v(1)">1</button></td>
+        <td><button class="button" value="2" onclick="v(2)">2</button></td>
+        <td><button class="button" value="3" onclick="v(3)">3</button></td>
+        <td><button class="button" value="+" onclick="co()">+</button></td>
     </tr>
     <tr>
-        <td><button onclick="display(4)">4</button></td>
-        <td><button onclick="display(5)">5</button></td>
-        <td><button onclick="display(6)">6</button></td>
-        <td><button onclick="sub()">-</button></td>
+        <td><button class="button" value="4" onclick="v(4)">4</button></td>
+        <td><button class="button" value="5" onclick="v(5)">5</button></td>
+        <td><button class="button" value="6" onclick="v(6)">6</button></td>
+        <td><button class="button" value="-" onclick="ch()">-</button></td>
     </tr>
     <tr>
-        <td><button onclick="display(7)">7</button></td>
-        <td><button onclick="display(8)">8</button></td>
-        <td><button onclick="display(9)">9</button></td>
-        <td><button onclick="multi()">x</button></td>
+        <td><button class="button" value="7" onclick="v(7)">7</button></td>
+        <td><button class="button" value="8" onclick="v(8)">8</button></td>
+        <td><button class="button" value="9" onclick="v(9)">9</button></td>
+        <td><button class="button" value="x" onclick="nh()">x</button></td>
     </tr>
     <tr>
-        <td><button type="reset">C</button></td>
-        <td><button onclick="display(0)">0</button></td>
-        <td><button onclick="result()">=</button></td>
-        <td><button onclick="(divi())">/</button></td>
+        <td><button class="button" type="reset" >C</button></td>
+        <td><button class="button" value="0" onclick="v(0)">0</button></td>
+        <td><button class="button" value="=" onclick="kq()">=</button></td>
+        <td><button class="button" value="/" onclick="ch()">/</button></td>
+
     </tr>
+    <script>
+        function v(x) { document.getElementById("show").value += x;}
+        function co() { document.getElementById("show").value += "+";}
+        function tr() { document.getElementById("show").value += "-";}
+        function nh() { let x = "*";
+            document.getElementById("show").value += x;}
+        function ch() { document.getElementById("show").value += "/";}
+
+        function kq() { document.getElementById("show").value = eval(document.getElementById("show").value);
+
+        }
+    </script>
 </table>
 </form>
-<script src="calculator.js"></script>
 </body>
 </html>
