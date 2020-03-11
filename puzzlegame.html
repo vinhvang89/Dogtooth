@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Puzzle Game</title>
 </head>
-<body>
+<body onclick="d()">
 <h1>Hãy sắp xếp các thanh niên sau về đúng quốc tịch</h1><br>
 <table>
     <tr><td id="image1" onclick="a()"><img height="200" width="180" src="https://imgur.com/UiMU8on.jpg" alt=""></td></tr>
@@ -31,15 +31,19 @@
         console.log(y)
     }
     function c() {
-        let anh1 = '<img height="200" width="180" src="https://imgur.com/IpQZFAO.jpg" alt="">';
-        let anh2 = '<img height="200" width="180" src="https://imgur.com/6C9Q4ry.jpg" alt="">';
+        let anh2 = '<img height="200" width="180" src="https://imgur.com/IpQZFAO.jpg" alt="">';
+        let anh1 = '<img height="200" width="180" src="https://imgur.com/6C9Q4ry.jpg" alt="">';
         if (z === true ){ z = false;document.getElementById("image3").innerHTML = anh2;}
         else {document.getElementById("image3").innerHTML = anh1;z = true;}
         console.log(z);
     }
+    function d() {
+        if ( x === true && y === true && z === true) {document.getElementById("result").innerHTML= "Đúng rồi";}
+        else if ( x === false && y === false && z === false)  { document.getElementById("result").innerHTML= "Đúng rồi";}
+        else {document.getElementById("result").innerHTML= "Sai rồi xếp lại";}
 
-if ( x === true && y === true && z === true) { alert("Xếp đúng rồi")}
-else if ( x === false && y === false && z === false)  { alert("Xếp đúng rồi")}
+    }
+
 </script>
 </body>
 </html>
