@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Game</title>
+</head>
+<body>
+<h1>Hãy sắp xếp các thanh niên sau về đúng quốc tịch</h1><br>
+<table>
+    <tr><td id="image1" onclick="a()"><img height="200" width="180" src="https://imgur.com/UiMU8on.jpg" alt=""></td></tr>
+    <tr><td id="image2" onclick="b()"><img height="200" width="180" src="https://imgur.com/wOo3TOU.jpg" alt=""></td></tr>
+    <tr><td id="image3" onclick="c()"><img height="200" width="180" src="https://imgur.com/6C9Q4ry.jpg" alt=""></td></tr>
+</table><br>
+<h1 id="result">Kết quả là :</h1>
+<script>
+    let x ;
+    let y ;
+    let z ;
+    function a() {
+    let anh1 = '<img height="200" width="180" src="https://imgur.com/o0YLtKc.jpg" alt="">';
+    let anh2 = '<img height="200" width="180" src="https://imgur.com/UiMU8on.jpg" alt="">';
+    if (x === true ){ x = false;document.getElementById("image1").innerHTML = anh2;}
+    else {document.getElementById("image1").innerHTML = anh1;x = true;}
+    console.log(x);
+    }
+    function b() {
+        let anh2 = '<img height="200" width="180" src="https://imgur.com/jLBFZEY.jpg" alt="">';
+        let anh1 = '<img height="200" width="180" src="https://imgur.com/wOo3TOU.jpg" alt="">';
+        if (y === true ){ y = false;document.getElementById("image2").innerHTML = anh2;}
+        else {document.getElementById("image2").innerHTML = anh1;y = true;}
+        console.log(y)
+    }
+    function c() {
+        let anh1 = '<img height="200" width="180" src="https://imgur.com/IpQZFAO.jpg" alt="">';
+        let anh2 = '<img height="200" width="180" src="https://imgur.com/6C9Q4ry.jpg" alt="">';
+        if (z === true ){ z = false;document.getElementById("image3").innerHTML = anh2;}
+        else {document.getElementById("image3").innerHTML = anh1;z = true;}
+        console.log(z);
+    }
+
+if ( x === true && y === true && z === true) { alert("Xếp đúng rồi")}
+else if ( x === false && y === false && z === false)  { alert("Xếp đúng rồi")}
+</script>
+</body>
+</html>
